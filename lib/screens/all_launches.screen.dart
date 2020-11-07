@@ -13,6 +13,7 @@ class AllLaunchesScreen extends StatefulWidget {
 }
 
 class _AllLaunchesScreenState extends State<AllLaunchesScreen> {
+  bool _isLoading = true;
   List<LaunchModel> _allLaunches = [];
   LaunchRepository _launchRepository;
 
@@ -37,6 +38,10 @@ class _AllLaunchesScreenState extends State<AllLaunchesScreen> {
           title: 'Connection Error',
           content: 'Could not retrieve data. Please try again later.',
           defaultActionText: 'OK');
+    } finally {
+      setState(() {
+        _isLoading = false;
+      });
     }
   }
 
@@ -53,6 +58,17 @@ class _AllLaunchesScreenState extends State<AllLaunchesScreen> {
           children: <Widget>[
             if (_allLaunches.length > 0)
               for (var launch in _allLaunches) LaunchCardWidget(launch: launch)
+            else if (_isLoading)
+              Padding(
+                padding: const EdgeInsets.all(30.0),
+                child: Center(
+                  child: SizedBox(
+                    width: 30,
+                    height: 30,
+                    child: CircularProgressIndicator(),
+                  ),
+                ),
+              )
             else
               Padding(
                 padding: const EdgeInsets.all(30.0),
