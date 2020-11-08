@@ -3,6 +3,8 @@
 [![codecov](https://codecov.io/gh/shrsujan/spaceX-missions/branch/master/graph/badge.svg?token=TEYLMPG3XF)](https://codecov.io/gh/shrsujan/spaceX-missions)
 
 This is a small flutter application which lists all the spaceX mission launches and shows some more detail in a separate screen when a card is tapped.
+
+[download apk](https://github.com/shrsujan/spaceX-missions/raw/master/assets/spaceX_V1.0.0.apk)
   
 ![main screen](https://i.imgur.com/WWvUjL5l.jpg)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![details screen](https://i.imgur.com/eR2dv9Xl.jpg)
 
