@@ -11,5 +11,11 @@ String formattedDateTime({@required String dateTime, bool showTime = true}) {
     formatter.add_Hms();
   }
 
-  return formatter.format(DateTime.parse(dateTime));
+  try {
+    final dateTimeObj = DateTime.parse(dateTime);
+
+    return formatter.format(dateTimeObj);
+  } catch (_) {
+    return '';
+  }
 }

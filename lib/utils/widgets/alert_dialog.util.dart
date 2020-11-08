@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 
-Future<void> showAlertDialog({
+Future<Widget> showAlertDialog({
   @required BuildContext context,
   @required String title,
   @required String content,

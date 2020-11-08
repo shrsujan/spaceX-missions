@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import 'package:flutter/foundation.dart';
 
 import 'package:spaceX/constants/api.dart';
-import 'package:spaceX/utils/string.dart';
+import 'package:spaceX/utils/string.util.dart';
 
 class APIService {
   final API api;

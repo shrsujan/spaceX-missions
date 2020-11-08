@@ -9,12 +9,19 @@ class DisplayInfoWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: EdgeInsets.symmetric(horizontal: 2.0, vertical: 3.0),
-        child: RichText(
-            text: TextSpan(children: <TextSpan>[
-          TextSpan(
-              text: '$title: ', style: TextStyle(fontWeight: FontWeight.bold)),
-          TextSpan(text: value)
-        ])));
+      padding: EdgeInsets.symmetric(horizontal: 2.0, vertical: 3.0),
+      child: RichText(
+        textDirection: TextDirection.ltr,
+        text: TextSpan(
+          children: <TextSpan>[
+            TextSpan(
+              text: '$title: ',
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+            TextSpan(text: value),
+          ],
+        ),
+      ),
+    );
   }
 }
